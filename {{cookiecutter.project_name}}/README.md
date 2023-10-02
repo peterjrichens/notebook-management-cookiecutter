@@ -49,13 +49,7 @@ eval "$(pyenv virtualenv-init -)"
     pyenv virtualenv {{cookiecutter.python_version}} {{cookiecutter.project_slug}}
     ```
 
-3. **Activate the Virtual Environment**:
-
-    ```bash
-    pyenv local {{cookiecutter.python_version}}/envs/{{cookiecutter.project_slug}}
-    ```
-
-4. **Install Project Dependencies**:
+3. **Install Project Dependencies**:
 
     With your virtual environment activated, you can install necessary packages. For instance:
 
