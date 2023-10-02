@@ -1,0 +1,6 @@
+jupyter
+jupytext
+papermill
+black
+nb_black==1.0.5
+ipython-autotime

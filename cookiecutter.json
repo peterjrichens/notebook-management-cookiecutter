@@ -1,0 +1,6 @@
+{
+    "project_name": "my-notebook-project",
+    "description": "A brief description of your project.",
+    "python_version": "3.11.5",
+    "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '_') }}"
+}
