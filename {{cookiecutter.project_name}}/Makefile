@@ -4,13 +4,12 @@ SCRIPT = notebooks/{{cookiecutter.project_slug}}.py
 PARAM_DIR = notebooks/parameters
 EXECUTED_DIR = notebooks/executed
 PUBLISH_DIR = docs
-JUPYTEXT = jupytext
 
 # Update whichever of notebooks/{{cookiecutter.project_slug}}.ipynb or notebooks/{{cookiecutter.project_slug}}.py is outdated
 sync:
 	@echo "Syncing notebook $(RAW_NOTEBOOK) and script $(SCRIPT)..."
-	$(JUPYTEXT) --set-formats ipynb,py $(SCRIPT)
-	$(JUPYTEXT) --sync $(SCRIPT)
+	jupytext --set-formats ipynb,py $(SCRIPT)
+	jupytext --sync $(SCRIPT)
 	@echo "Sync done."
 
 raw-notebook: sync

@@ -66,18 +66,18 @@ eval "$(pyenv virtualenv-init -)"
 
 ## Workflow
 
-1. **Define Your Notebook**: Update `notebooks/{{cookiecutter.project_slug}}.ipynb` with the desired content and logic. This notebook serves as the template for all executions.
+1. Define Your Notebook: Update `notebooks/{{cookiecutter.project_slug}}.ipynb` with the desired content and logic. This notebook serves as the template for all executions.
 
-2. **Sync the template notebook and the Python script using:
+2. Sync the template notebook and the Python script using:
     ```bash
     make sync
     ```
 
-3. **Parameterise Your Notebook**: Identify cells in your notebook that should be parameterised. These cells should be tagged with the "parameters" tag in Jupyter.
+3. Parameterise Your Notebook: Identify cells in your notebook that should be parameterised. These cells should be tagged with the "parameters" tag in Jupyter.
 
-4. **Set Default Parameters**: Update `notebooks/{{cookiecutter.project_slug}}.yaml` with default parameter values.
+4. Set Default Parameters: Update `notebooks/{{cookiecutter.project_slug}}.yaml` with default parameter values.
 
-5. **Generate Parameters**: Whenever you want to execute the notebook with a new set of parameters, generate a new parameter file based on the default using the `generate-params` command. Then, manually adjust the generated file as necessary.
+5. Generate Parameters: Whenever you want to execute the notebook with a new set of parameters, generate a new parameter file based on the default using the `generate-params` command. Then, manually adjust the generated file as necessary.
 
 6. **Execute with Parameters**: Use the `execute` command, specifying the desired timestamp (which corresponds to a parameter YAML file). The executed notebook is saved with the same timestamp in the `notebooks/executed/` directory, and converted to HTML format to share via GitHub pages.
 
